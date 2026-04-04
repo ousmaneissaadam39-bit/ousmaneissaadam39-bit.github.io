@@ -1,93 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- ========================================
-       META & SEO
-  ======================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de OUSMANE ISSA ADAM — Étudiant en Ingénierie Réseaux Intelligents et Cybersécurité. Spécialiste en sécurité des réseaux, cloud et programmation." />
-  <meta name="keywords" content="cybersécurité, réseaux, cloud, portfolio, ingénieur, sécurité informatique" />
+  <meta name="description" content="Portfolio de OUSMANE ISSA ADAM — Étudiant en Ingénierie Réseaux Intelligents et Cybersécurité. Spécialiste en sécurité des réseaux, cloud AWS et programmation." />
+  <meta name="keywords" content="cybersécurité, réseaux, cloud, portfolio, ingénieur, sécurité informatique, pentest, ethical hacking" />
   <meta name="author" content="OUSMANE ISSA ADAM" />
-
-  <!-- Open Graph (partage sur réseaux sociaux) -->
-  <meta property="og:title" content="OUSMANE ISSA ADAM — Cybersecurity Engineer" />
+  <meta property="og:title" content="OUSMANE ISSA ADAM — Cybersecurity & Networks Engineer" />
   <meta property="og:description" content="Portfolio professionnel en cybersécurité et réseaux intelligents." />
   <meta property="og:type" content="website" />
-
   <title>OUSMANE ISSA ADAM | Cybersecurity &amp; Networks Engineer</title>
 
-  <!-- ========================================
-       FONTS (Google Fonts)
-  ======================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
-
-  <!-- ========================================
-       FONT AWESOME (icônes)
-  ======================================== -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- ========================================
-       CSS PRINCIPAL
-  ======================================== -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- ========================================
-       CURSEUR PERSONNALISÉ
-  ======================================== -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
 
-  <!-- ========================================
-       BARRE DE NAVIGATION
-  ======================================== -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-container">
-      <!-- Logo -->
       <a href="#home" class="nav-logo" aria-label="Accueil">
         <span class="logo-bracket">[</span>
-        <span class="logo-text">SEC_ENGINR</span>
+        <span class="logo-text">OIA_SEC</span>
         <span class="logo-bracket">]</span>
       </a>
-
-      <!-- Menu hamburger (mobile) -->
       <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
-      <!-- Liens de navigation -->
       <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#home"      class="nav-link active"><i class="fas fa-terminal"></i> Home</a></li>
-        <li><a href="#about"     class="nav-link"><i class="fas fa-user-shield"></i> About</a></li>
-        <li><a href="#skills"    class="nav-link"><i class="fas fa-microchip"></i> Skills</a></li>
-        <li><a href="#projects"  class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
-        <li><a href="#contact"   class="nav-link"><i class="fas fa-satellite-dish"></i> Contact</a></li>
+        <li><a href="#home"     class="nav-link active"><i class="fas fa-terminal"></i> Home</a></li>
+        <li><a href="#about"    class="nav-link"><i class="fas fa-user-shield"></i> About</a></li>
+        <li><a href="#skills"   class="nav-link"><i class="fas fa-microchip"></i> Skills</a></li>
+        <li><a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
+        <li><a href="#contact"  class="nav-link"><i class="fas fa-satellite-dish"></i> Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ========================================
-       SECTION HERO (Page d'accueil)
-  ======================================== -->
+  <!-- HERO -->
   <section class="hero" id="home" aria-label="Présentation">
-    <!-- Grille de fond animée -->
     <div class="hero-grid" aria-hidden="true"></div>
-    <!-- Particules flottantes -->
+    <div class="matrix-rain" id="matrixRain" aria-hidden="true"></div>
     <div class="particles" id="particles" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <!-- Badge statut -->
       <div class="hero-badge" data-aos="fade-down">
         <span class="badge-dot"></span>
-        <span>Available for opportunities</span>
+        <span>Available for PFA Internship</span>
       </div>
 
-      <!-- Texte principal -->
       <p class="hero-greeting" data-aos="fade-up" data-aos-delay="100">
         <span class="typed-prefix">$ whoami →</span>
       </p>
@@ -95,50 +62,44 @@
       <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
         <span class="name-line">
           <span class="first-name">OUSMANE</span>
-          <span class="last-name">ISSA ADAM</span>
+          <span class="last-name" data-text="ISSA ADAM">ISSA ADAM</span>
         </span>
       </h1>
 
-      <!-- Titre animé avec typewriter -->
       <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
         <span class="subtitle-prefix">// </span>
         <span class="typewriter" id="typewriter"></span>
         <span class="cursor-blink">_</span>
       </div>
 
-      <!-- Description courte -->
       <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-        Étudiant ingénieur passionné par la <strong>sécurité des réseaux</strong>,
-        la <strong>détection d'intrusions</strong> et la <strong>protection des infrastructures critiques</strong>.
-        Je construis des systèmes robustes contre les menaces modernes.
+        Ingénieur en <strong>Réseaux Intelligents &amp; Cybersécurité</strong>,
+        je conçois et sécurise des infrastructures réseau contre les menaces modernes.
+        Passionné par la <strong>sécurité offensive</strong>, le <strong>cloud AWS</strong>
+        et la <strong>détection d'intrusions</strong> — je transforme les failles en forteresses.
       </p>
 
-      <!-- Boutons d'action -->
       <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i>
-          <span>Voir mes projets</span>
+          <i class="fas fa-rocket"></i><span>Voir mes projets</span>
         </a>
         <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-paper-plane"></i>
-          <span>Me contacter</span>
+          <i class="fas fa-paper-plane"></i><span>Me contacter</span>
         </a>
         <a href="cv_ousmane.pdf" class="btn btn-ghost" download aria-label="Télécharger mon CV">
-          <i class="fas fa-download"></i>
-          <span>Télécharger CV</span>
+          <i class="fas fa-download"></i><span>Télécharger CV</span>
         </a>
       </div>
 
-      <!-- Stats rapides -->
       <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
         <div class="stat-item">
-          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-number" data-target="6">0</span>
           <span class="stat-plus">+</span>
           <span class="stat-label">Projets</span>
         </div>
         <div class="stat-divider" aria-hidden="true">|</div>
         <div class="stat-item">
-          <span class="stat-number" data-target="11">0</span>
+          <span class="stat-number" data-target="3">0</span>
           <span class="stat-plus">+</span>
           <span class="stat-label">Certifications</span>
         </div>
@@ -151,7 +112,6 @@
       </div>
     </div>
 
-    <!-- Décorations côté droit -->
     <div class="hero-visual" aria-hidden="true">
       <div class="hex-grid">
         <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
@@ -161,21 +121,15 @@
       <div class="scan-line"></div>
     </div>
 
-    <!-- Indicateur scroll -->
     <div class="scroll-indicator" aria-label="Défiler vers le bas">
       <span>Scroll</span>
-      <div class="scroll-arrow">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
     </div>
   </section>
 
-  <!-- ========================================
-       SECTION À PROPOS
-  ======================================== -->
+  <!-- ABOUT -->
   <section class="about" id="about" aria-label="À propos de moi">
     <div class="container">
-      <!-- En-tête de section -->
       <div class="section-header" data-aos="fade-up">
         <span class="section-tag">// 01. about_me</span>
         <h2 class="section-title">Qui suis-je <span class="accent">?</span></h2>
@@ -183,19 +137,17 @@
       </div>
 
       <div class="about-grid">
-        <!-- Photo / Avatar -->
         <div class="about-visual" data-aos="fade-right">
           <div class="avatar-container">
             <div class="avatar-frame">
-              <!-- Remplace par ton image : <img src="photo.jpg" alt="" /> -->
-             <div class="avatar-placeholder">
-  <img src="ousmane.jpeg" alt="OUSMANE ISSA ADAM" />
-</div>
+              <div class="avatar-placeholder">
+                <!-- Ta photo est déjà uploadée sur GitHub -->
+                <img src="ousmane.jpeg" alt="OUSMANE ISSA ADAM" />
+              </div>
               <div class="avatar-ring ring-1" aria-hidden="true"></div>
               <div class="avatar-ring ring-2" aria-hidden="true"></div>
               <div class="avatar-ring ring-3" aria-hidden="true"></div>
             </div>
-            <!-- Badges flottants -->
             <div class="floating-badge badge-security">
               <i class="fas fa-shield-halved"></i> Cybersecurity
             </div>
@@ -205,7 +157,6 @@
           </div>
         </div>
 
-        <!-- Texte à propos -->
         <div class="about-content" data-aos="fade-left">
           <div class="terminal-window">
             <div class="terminal-header">
@@ -218,32 +169,33 @@
               <p><span class="cmd">$ cat about.txt</span></p>
               <br/>
               <p class="about-text">
-                Je suis étudiant en <strong>Ingénierie des Réseaux Intelligents et Cybersécurité</strong>,
-                passionné par la protection des systèmes d'information et la sécurité offensive/défensive.
+               Élève ingénieur en <strong>Réseaux Intelligents et Cybersécurité</strong>
+                à l'ENSA Khouribga. Je combine expertise technique en infrastructure réseau
+                et passion pour la sécurité offensive/défensive.
               </p>
               <br/>
               <p class="about-text">
-                Mon parcours m'a permis d'acquérir des compétences solides en
-                <span class="highlight">administration réseau</span>,
-                <span class="highlight">ethical hacking</span>,
-                <span class="highlight">analyse de vulnérabilités</span>
-                et <span class="highlight">architecture cloud sécurisée</span>.
+                Certifié <span class="highlight">AWS Security Specialty</span> et
+                <span class="highlight">CCNA 1~3</span>, j'ai développé des compétences
+                solides en <span class="highlight">pentest</span>,
+                <span class="highlight">hardening système</span> et
+                <span class="highlight">architecture réseau sécurisée</span>.
               </p>
               <br/>
               <p class="about-text">
-                Je suis constamment à la recherche de nouveaux défis, de CTF
-                et d'opportunités de stage PFA dans le domaine de la cybersécurité et réseaux.
+                Activement à la recherche d'un <strong>stage PFA</strong> pour mettre
+                mes compétences au service d'une équipe sécurité ambitieuse.
+                Let's build something secure together.
               </p>
             </div>
           </div>
 
-          <!-- Infos rapides -->
           <div class="about-info-grid">
             <div class="info-item">
               <i class="fas fa-graduation-cap"></i>
               <div>
                 <strong>Formation</strong>
-                <span>Ingénierie Réseaux & Cybersécurité</span>
+                <span>Ingénierie Réseaux &amp; Cybersécurité</span>
               </div>
             </div>
             <div class="info-item">
@@ -257,7 +209,7 @@
               <i class="fas fa-briefcase"></i>
               <div>
                 <strong>Disponibilité</strong>
-                <span>Stage / Alternance</span>
+                <span>Stage PFA / Alternance</span>
               </div>
             </div>
             <div class="info-item">
@@ -273,9 +225,7 @@
     </div>
   </section>
 
-  <!-- ========================================
-       SECTION COMPÉTENCES
-  ======================================== -->
+  <!-- SKILLS -->
   <section class="skills" id="skills" aria-label="Mes compétences">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -284,10 +234,8 @@
         <div class="section-line" aria-hidden="true"></div>
       </div>
 
-      <!-- Catégories de compétences -->
       <div class="skills-grid">
 
-        <!-- Cybersécurité -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-shield-halved"></i></div>
@@ -299,21 +247,17 @@
             <span class="skill-tag level-mid">SIEM / SOC</span>
             <span class="skill-tag level-high">Analyse de vulnérabilités</span>
             <span class="skill-tag level-mid">Cryptographie</span>
-            <span class="skill-tag level-mid">administration Système et réseaux</span>
+            <span class="skill-tag level-mid">Admin Système &amp; Réseaux</span>
             <span class="skill-tag level-high">CTF</span>
           </div>
-          <!-- Barre de maîtrise globale -->
           <div class="skill-progress-container">
             <span>Maîtrise globale</span>
             <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-              <div class="skill-fill" data-width="82">
-                <span class="skill-percent">82%</span>
-              </div>
+              <div class="skill-fill" data-width="82"><span class="skill-percent">82%</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Réseaux -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-network-wired"></i></div>
@@ -322,46 +266,40 @@
           <div class="skill-tags">
             <span class="skill-tag level-high">TCP/IP</span>
             <span class="skill-tag level-high">Cisco / Packet Tracer</span>
-            <span class="skill-tag level-mid">BGP / OSPF/RSVP</span>
+            <span class="skill-tag level-mid">BGP / OSPF / RSVP</span>
             <span class="skill-tag level-high">Firewall / IDS/IPS</span>
             <span class="skill-tag level-mid">VPN / SDN</span>
-            <span class="skill-tag level-mid">Wireshark/GNS3</span>
+            <span class="skill-tag level-mid">Wireshark / GNS3</span>
           </div>
           <div class="skill-progress-container">
             <span>Maîtrise globale</span>
             <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-              <div class="skill-fill" data-width="88">
-                <span class="skill-percent">88%</span>
-              </div>
+              <div class="skill-fill" data-width="88"><span class="skill-percent">88%</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Cloud -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
             <h3>Cloud &amp; DevSecOps</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag level-mid">AWS</span>
+            <span class="skill-tag level-mid">AWS Security</span>
             <span class="skill-tag level-mid">Azure</span>
             <span class="skill-tag level-mid">Docker</span>
             <span class="skill-tag level-low">Kubernetes</span>
-            <span class="skill-tag level-mid">SIEM</span>
+            <span class="skill-tag level-mid">SIEM / Wazuh</span>
             <span class="skill-tag level-mid">Linux Sécurisé</span>
           </div>
           <div class="skill-progress-container">
             <span>Maîtrise globale</span>
             <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-              <div class="skill-fill" data-width="70">
-                <span class="skill-percent">70%</span>
-              </div>
+              <div class="skill-fill" data-width="70"><span class="skill-percent">70%</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Programmation -->
         <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
           <div class="skill-cat-header">
             <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
@@ -369,7 +307,7 @@
           </div>
           <div class="skill-tags">
             <span class="skill-tag level-high">Python</span>
-            <span class="skill-tag level-mid">Bash / Shell/Assembleur</span>
+            <span class="skill-tag level-mid">Bash / Shell / Assembleur</span>
             <span class="skill-tag level-mid">C / C++</span>
             <span class="skill-tag level-mid">JavaScript</span>
             <span class="skill-tag level-low">SQL</span>
@@ -378,15 +316,13 @@
           <div class="skill-progress-container">
             <span>Maîtrise globale</span>
             <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <div class="skill-fill" data-width="75">
-                <span class="skill-percent">75%</span>
-              </div>
+              <div class="skill-fill" data-width="75"><span class="skill-percent">75%</span></div>
             </div>
           </div>
         </div>
+
       </div>
 
-      <!-- Légende niveaux -->
       <div class="skills-legend" data-aos="fade-up">
         <span><span class="dot high"></span> Expert</span>
         <span><span class="dot mid"></span> Intermédiaire</span>
@@ -395,9 +331,7 @@
     </div>
   </section>
 
-  <!-- ========================================
-       SECTION PROJETS
-  ======================================== -->
+  <!-- PROJECTS -->
   <section class="projects" id="projects" aria-label="Mes projets">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -406,39 +340,33 @@
         <div class="section-line" aria-hidden="true"></div>
       </div>
 
-      <!-- Filtres -->
       <div class="project-filters" data-aos="fade-up" role="tablist" aria-label="Filtrer les projets">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Tous</button>
-        <button class="filter-btn" data-filter="security" role="tab" aria-selected="false">Sécurité</button>
-        <button class="filter-btn" data-filter="network" role="tab" aria-selected="false">Réseaux</button>
-        <button class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">Cloud</button>
-        <button class="filter-btn" data-filter="dev" role="tab" aria-selected="false">Dev</button>
+        <button class="filter-btn active" data-filter="all"      role="tab" aria-selected="true">Tous</button>
+        <button class="filter-btn"        data-filter="security" role="tab" aria-selected="false">Sécurité</button>
+        <button class="filter-btn"        data-filter="network"  role="tab" aria-selected="false">Réseaux</button>
+        <button class="filter-btn"        data-filter="cloud"    role="tab" aria-selected="false">Cloud</button>
+        <button class="filter-btn"        data-filter="dev"      role="tab" aria-selected="false">Dev</button>
       </div>
 
-      <!-- Grille de projets -->
       <div class="projects-grid" id="projectsGrid">
 
         <!-- Projet 1 -->
         <article class="project-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card-inner">
             <div class="project-header">
-              <div class="project-icon"><i class="fas fa-bug"></i></div>
+              <div class="project-icon"><i class="fas fa-user-secret"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Code GitHub" title="Voir le code">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="project-link" aria-label="Démo live" title="Voir la démo">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">Scanner de Vulnérabilités</h3>
+            <h3 class="project-title">PenTest Lab — Active Directory</h3>
             <p class="project-desc">
-              Outil Python automatisé pour scanner les ports ouverts, détecter les services
-              et identifier les CVE associées via l'API NVD.
+              Simulation complète d'une attaque sur un domaine Windows Active Directory :
+              énumération, exploitation Kerberoasting, Pass-the-Hash et élévation de privilèges.
+              Environnement monté sur VirtualBox avec Windows Server 2019.
             </p>
             <div class="project-tech">
-              <span>Python</span><span>Nmap</span><span>REST API</span>
+              <span>Kali Linux</span><span>Mimikatz</span><span>BloodHound</span><span>AD</span>
             </div>
             <div class="project-status status-done">
               <span class="status-dot"></span> Terminé
@@ -452,18 +380,18 @@
             <div class="project-header">
               <div class="project-icon"><i class="fas fa-sitemap"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Code GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="project-link" aria-label="Démo live"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
             <div class="project-badge">Featured</div>
-            <h3 class="project-title">Réseau d'Entreprise Simulé</h3>
+            <h3 class="project-title">Infrastructure Réseau Multi-Site Sécurisée</h3>
             <p class="project-desc">
-              Architecture réseau complète simulée sous GNS3 avec VLANs, routage OSPF,
-              pare-feu Cisco ASA et zone DMZ sécurisée.
+              Conception d'un réseau d'entreprise multi-site sous GNS3 : VLANs segmentés,
+              routage OSPF, tunnel VPN IPSec inter-sites, pare-feu Cisco ASA avec zones
+              DMZ et politiques de sécurité strictes.
             </p>
             <div class="project-tech">
-              <span>GNS3</span><span>Cisco</span><span>OSPF</span><span>ASA</span>
+              <span>GNS3</span><span>Cisco ASA</span><span>OSPF</span><span>IPSec VPN</span>
             </div>
             <div class="project-status status-done">
               <span class="status-dot"></span> Terminé
@@ -475,18 +403,19 @@
         <article class="project-card" data-category="security" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card-inner">
             <div class="project-header">
-              <div class="project-icon"><i class="fas fa-eye"></i></div>
+              <div class="project-icon"><i class="fas fa-brain"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Code GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">IDS avec Machine Learning</h3>
+            <h3 class="project-title">IDS Intelligent avec Machine Learning</h3>
             <p class="project-desc">
-              Système de détection d'intrusions basé sur des algorithmes ML
-              (Random Forest, SVM) entraîné sur le dataset NSL-KDD.
+              Système de détection d'intrusions basé sur Random Forest et SVM,
+              entraîné sur le dataset NSL-KDD. Atteint 97.3% de précision sur
+              la classification du trafic malveillant avec dashboard temps réel.
             </p>
             <div class="project-tech">
-              <span>Python</span><span>Scikit-learn</span><span>ML</span>
+              <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span>
             </div>
             <div class="project-status status-progress">
               <span class="status-dot"></span> En cours
@@ -498,19 +427,19 @@
         <article class="project-card" data-category="cloud" data-aos="fade-up" data-aos-delay="250">
           <div class="project-card-inner">
             <div class="project-header">
-              <div class="project-icon"><i class="fab fa-docker"></i></div>
+              <div class="project-icon"><i class="fab fa-aws"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Code GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="project-link" aria-label="Démo live"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">Infrastructure Docker Sécurisée</h3>
+            <h3 class="project-title">Architecture AWS — Zero Trust</h3>
             <p class="project-desc">
-              Déploiement d'une infrastructure microservices avec Docker Compose,
-              incluant reverse proxy Nginx, SSL/TLS et scan d'images avec Trivy.
+              Déploiement d'une architecture cloud AWS selon le modèle Zero Trust :
+              VPC isolés, IAM granulaire, WAF, CloudTrail pour l'audit,
+              GuardDuty pour la détection de menaces et chiffrement KMS end-to-end.
             </p>
             <div class="project-tech">
-              <span>Docker</span><span>Nginx</span><span>Trivy</span>
+              <span>AWS</span><span>IAM</span><span>GuardDuty</span><span>CloudTrail</span>
             </div>
             <div class="project-status status-done">
               <span class="status-dot"></span> Terminé
@@ -524,16 +453,17 @@
             <div class="project-header">
               <div class="project-icon"><i class="fas fa-terminal"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Code GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">Outil de Chiffrement CLI</h3>
+            <h3 class="project-title">NetScan Pro — Scanner Réseau CLI</h3>
             <p class="project-desc">
-              Application en ligne de commande Python pour chiffrer/déchiffrer des fichiers
-              avec AES-256, gestion des clés et interface interactive.
+              Outil Python de reconnaissance réseau : scan de ports TCP/UDP,
+              détection OS, banner grabbing et génération de rapports PDF automatiques.
+              Intégration API NVD pour corrélation CVE en temps réel.
             </p>
             <div class="project-tech">
-              <span>Python</span><span>AES-256</span><span>Cryptography</span>
+              <span>Python</span><span>Scapy</span><span>Nmap</span><span>ReportLab</span>
             </div>
             <div class="project-status status-done">
               <span class="status-dot"></span> Terminé
@@ -545,32 +475,31 @@
         <article class="project-card" data-category="security" data-aos="fade-up" data-aos-delay="350">
           <div class="project-card-inner">
             <div class="project-header">
-              <div class="project-icon"><i class="fas fa-flag"></i></div>
+              <div class="project-icon"><i class="fas fa-tower-broadcast"></i></div>
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="Write-up"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/ousmaneissaadam39-bit" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">CTF Write-ups</h3>
+            <h3 class="project-title">Firewall &amp; SIEM — SOC Simulation</h3>
             <p class="project-desc">
-              Collection de write-ups détaillés de challenges CTF (TryHackMe, HackTheBox)
-              couvrant Web, Crypto, Forensics et Pwn.
+              Mise en place d'un mini-SOC : pfSense comme pare-feu périmétrique,
+              Wazuh SIEM pour la corrélation d'événements, règles de détection custom
+              et dashboard de monitoring avec alertes automatiques par email.
             </p>
             <div class="project-tech">
-              <span>TryHackMe</span><span>HackTheBox</span><span>Forensics</span>
+              <span>pfSense</span><span>Wazuh</span><span>ELK Stack</span><span>SIEM</span>
             </div>
-            <div class="project-status status-progress">
-              <span class="status-dot"></span> Continu
+            <div class="project-status status-done">
+              <span class="status-dot"></span> Terminé
             </div>
           </div>
         </article>
 
-      </div><!-- /projects-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- ========================================
-       SECTION CONTACT
-  ======================================== -->
+  <!-- CONTACT -->
   <section class="contact" id="contact" aria-label="Me contacter">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -580,10 +509,9 @@
       </div>
 
       <div class="contact-grid">
-        <!-- Infos de contact -->
         <div class="contact-info" data-aos="fade-right">
           <p class="contact-intro">
-            Tu as un projet, une opportunité de stage, ou simplement envie d'échanger
+            Tu as un projet, une opportunité de stage PFA, ou simplement envie d'échanger
             sur la cybersécurité ? N'hésite pas à m'écrire !
           </p>
 
@@ -592,7 +520,7 @@
               <div class="channel-icon"><i class="fas fa-envelope"></i></div>
               <div class="channel-info">
                 <strong>Email</strong>
-                <span>:ousmaneissaadam39@gmail.com</span>
+                <span>ousmaneissaadam39@gmail.com</span>
               </div>
               <i class="fas fa-arrow-right channel-arrow"></i>
             </a>
@@ -600,33 +528,29 @@
               <div class="channel-icon"><i class="fab fa-linkedin"></i></div>
               <div class="channel-info">
                 <strong>LinkedIn</strong>
-                <span>linkedin.com/in/ousmane-issa-adam-138643259</span>
+                <span>ousmane-issa-adam</span>
               </div>
               <i class="fas fa-arrow-right channel-arrow"></i>
             </a>
-            <a href="https://github.com/ousmaneissaadam39-bit
-" class="contact-channel" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
+            <a href="https://github.com/ousmaneissaadam39-bit" class="contact-channel" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
               <div class="channel-icon"><i class="fab fa-github"></i></div>
               <div class="channel-info">
                 <strong>GitHub</strong>
-                <span>github.com/iamousmane
-</span>
+                <span>ousmaneissaadam39-bit</span>
               </div>
               <i class="fas fa-arrow-right channel-arrow"></i>
             </a>
           </div>
 
-          <!-- Disponibilité -->
           <div class="availability-card">
             <div class="avail-dot"></div>
             <div>
-              <strong>Disponible pour un stage</strong>
+              <strong>Disponible pour un stage PFA</strong>
               <span>Réponse sous 24h</span>
             </div>
           </div>
         </div>
 
-        <!-- Formulaire de contact -->
         <div class="contact-form-wrapper" data-aos="fade-left">
           <div class="terminal-window">
             <div class="terminal-header">
@@ -636,79 +560,39 @@
               <span class="terminal-title">send_message.sh</span>
             </div>
             <div class="terminal-body">
-              <!--
-                SÉCURITÉ : Ce formulaire utilise des attributs HTML5 de validation.
-                Pour une vraie protection, valide TOUJOURS côté serveur (backend).
-                L'attribut novalidate est retiré pour garder la validation native.
-              -->
               <form class="contact-form" id="contactForm" action="#" method="post">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="contactName">$ name:</label>
-                    <input
-                      type="text"
-                      id="contactName"
-                      name="name"
-                      placeholder="Ton prénom et nom"
-                      required
-                      minlength="2"
-                      maxlength="100"
-                      autocomplete="name"
-                    />
+                    <input type="text" id="contactName" name="name" placeholder="Ton prénom et nom"
+                      required minlength="2" maxlength="100" autocomplete="name" />
                     <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
                   </div>
                   <div class="form-group">
                     <label for="contactEmail">$ email:</label>
-                    <input
-                      type="email"
-                      id="contactEmail"
-                      name="email"
-                      placeholder="ton@email.com"
-                      required
-                      maxlength="150"
-                      autocomplete="email"
-                    />
+                    <input type="email" id="contactEmail" name="email" placeholder="ton@email.com"
+                      required maxlength="150" autocomplete="email" />
                     <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="contactSubject">$ subject:</label>
-                  <input
-                    type="text"
-                    id="contactSubject"
-                    name="subject"
-                    placeholder="Objet du message"
-                    required
-                    minlength="3"
-                    maxlength="200"
-                  />
+                  <input type="text" id="contactSubject" name="subject" placeholder="Objet du message"
+                    required minlength="3" maxlength="200" />
                   <span class="form-error" id="subjectError" role="alert" aria-live="polite"></span>
                 </div>
                 <div class="form-group">
                   <label for="contactMessage">$ message:</label>
-                  <textarea
-                    id="contactMessage"
-                    name="message"
-                    placeholder="Écris ton message ici..."
-                    rows="5"
-                    required
-                    minlength="10"
-                    maxlength="2000"
-                  ></textarea>
+                  <textarea id="contactMessage" name="message" placeholder="Écris ton message ici..."
+                    rows="5" required minlength="10" maxlength="2000"></textarea>
                   <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
                 </div>
-
-                <!-- Honeypot anti-spam (champ caché des robots) -->
                 <div class="hp-field" aria-hidden="true">
                   <input type="text" name="website" tabindex="-1" autocomplete="off" />
                 </div>
-
                 <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-                  <i class="fas fa-paper-plane"></i>
-                  <span>Envoyer le message</span>
+                  <i class="fas fa-paper-plane"></i><span>Envoyer le message</span>
                 </button>
-
-                <!-- Message de succès -->
                 <div class="form-success" id="formSuccess" role="alert" aria-live="assertive" hidden>
                   <i class="fas fa-check-circle"></i>
                   Message envoyé avec succès ! Je te réponds bientôt.
@@ -721,18 +605,15 @@
     </div>
   </section>
 
-  <!-- ========================================
-       FOOTER
-  ======================================== -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer-glow" aria-hidden="true"></div>
     <div class="container">
       <div class="footer-grid">
-        <!-- Branding -->
         <div class="footer-brand">
           <a href="#home" class="nav-logo">
             <span class="logo-bracket">[</span>
-            <span class="logo-text">SEC_ENGINR</span>
+            <span class="logo-text">OIA_SEC</span>
             <span class="logo-bracket">]</span>
           </a>
           <p class="footer-tagline">
@@ -741,7 +622,6 @@
           </p>
         </div>
 
-        <!-- Navigation rapide -->
         <div class="footer-nav">
           <h4 class="footer-heading">Navigation</h4>
           <ul>
@@ -753,12 +633,10 @@
           </ul>
         </div>
 
-        <!-- Réseaux sociaux -->
         <div class="footer-social">
           <h4 class="footer-heading">Retrouve-moi</h4>
           <div class="social-links">
-            <a href="https://github.com/iamousmane"
-" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/ousmaneissaadam39-bit" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/in/ousmane-issa-adam-138643259/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -771,35 +649,27 @@
               <i class="fas fa-envelope"></i>
             </a>
           </div>
-          <!-- Certifications -->
           <div class="footer-certs">
-            <span class="cert-badge"><i class="fas fa-certificate"></i>AWS Certified Security - Specialty</span>
-            <span class="cert-badge"><i class="fas fa-certificate"></i> CCNA 1 ~ 3</span>
+            <span class="cert-badge"><i class="fas fa-certificate"></i> AWS Security Specialty</span>
+            <span class="cert-badge"><i class="fas fa-certificate"></i> CCNA 1~3</span>
           </div>
         </div>
       </div>
 
-      <!-- Bas de footer -->
       <div class="footer-bottom">
         <p>
-          &copy; <span id="currentYear"></span>OUSMANE ISSA ADAM — Tous droits réservés.
+          &copy; <span id="currentYear"></span> OUSMANE ISSA ADAM — Tous droits réservés.
           Conçu avec <i class="fas fa-heart" aria-hidden="true" style="color: var(--accent)"></i> et beaucoup de <i class="fas fa-coffee" aria-hidden="true"></i>
         </p>
-        <p class="footer-version">v1.0.0 — Build: <span id="buildDate"></span></p>
+        <p class="footer-version">v2.0.0 — Build: <span id="buildDate"></span></p>
       </div>
     </div>
   </footer>
 
-  <!-- ========================================
-       BOUTON RETOUR EN HAUT
-  ======================================== -->
   <button class="back-to-top" id="backToTop" aria-label="Retourner en haut de page">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- ========================================
-       JAVASCRIPT
-  ======================================== -->
   <script src="script.js"></script>
 </body>
 </html>
